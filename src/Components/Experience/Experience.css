@@ -1,0 +1,213 @@
+/* .experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 140px;
+  }
+  
+  .experience-title {
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .experience-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .experience-card {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .experience-role {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .experience-company {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .experience-duration {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  .experience-description {
+    font-size: 16px;
+    color: #444;
+    margin-top: 10px;
+  }
+   */
+/* General Experience Section */
+
+/* General Experience Section */
+.experience {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .experience-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #ccc;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item {
+    padding: 20px 40px;
+    position: relative;
+    width: 50%;
+  }
+  
+  .timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+  }
+  
+  .timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+  }
+  
+  .timeline-content {
+    padding: 20px;
+    background-color: #000; /* Changed to black */
+    color: #fff; /* Text color changed to white for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #007bff; /* Blue color for the circles */
+    border: 4px solid #fff; /* White border around the blue circles */
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  
+  .timeline-item:nth-child(odd)::before {
+    left: 100%;
+  }
+  
+  .timeline-item:nth-child(even)::before {
+    left: 0;
+  }
+  
+  .experience-role {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .experience-company {
+    font-size: 1.2rem;
+    color: #007bff; /* Blue text for company names */
+    margin-bottom: 0.5rem;
+  }
+  
+  .experience-duration {
+    font-size: 0.9rem;
+    color: #ddd; /* Light gray text for duration */
+    margin-bottom: 1rem;
+  }
+  
+  .experience-description {
+    font-size: 1rem;
+    color: #eee; /* Lighter text for description */
+  }
+  
+  @media (max-width: 768px) {
+    .experience {
+      padding: 1.5rem;
+      margin: 20px 30px;
+      text-align: left;
+    }
+  
+    .experience-title {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .timeline {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  
+    .timeline-item {
+      width: 100%;
+      padding: 15px;
+      text-align: left;
+    }
+  
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+      left: 0;
+      text-align: left;
+    }
+  
+    .timeline-content {
+      padding: 15px;
+      background-color: #000; /* Keep background black */
+      color: #fff; /* Keep text white */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .timeline-item::before {
+      top: 12px;
+      width: 18px;
+      height: 18px;
+      border: 3px solid #fff; /* White border on the circles */
+    }
+  
+    .experience-role {
+      font-size: 1.2rem;
+    }
+  
+    .experience-company {
+      font-size: 1rem;
+    }
+  
+    .experience-duration {
+      font-size: 0.8rem;
+    }
+  
+    .experience-description {
+      font-size: 0.9rem;
+    }
+  }
+  

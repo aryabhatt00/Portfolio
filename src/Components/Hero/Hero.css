@@ -1,0 +1,109 @@
+.hero{
+    font-family: 'Helvetica';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.hero img{
+    margin-top:75x;
+}
+
+.hero h1{
+    text-align: center;
+    width: 70%;
+    font-size: 40px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.hero h1 span{
+    background: linear-gradient(to top, #1a2a6c, #b21f1f, #fdbb2d);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p{
+    text-align: center;
+    width: 50%;
+    font-size: 20px;
+    line-height: 30px;
+
+}
+
+.hero-action{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    gap: 100px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 50px;
+
+}
+
+.hero-connect{
+    padding: 10px 10px;
+    border-radius: 30px;
+    background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.hero-connect:hover{
+    transform: scale(1.05);
+
+}
+
+.hero-resume{
+    padding: 10px 10px;
+    border-radius: 30px;
+    background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.hero-resume:hover{
+    transform: scale(1.05);
+}
+
+.hero-resume a {
+    text-decoration: none; /* Remove underline from the link */
+    color: white; /* Set text color inside the link */
+ 
+  }
+
+@media(max-width:768px){
+    .hero img{
+        /* margin-bottom: 100px; */
+        width: 200px;
+    }
+    .hero h1{
+        margin-top: 30px;
+        width: 70%;
+        font-size: 40px;
+    }
+
+    .hero p{
+        width: 70%;
+        font-size: 25px;
+        line-height: 30px;
+        margin: 10px 0px;
+    }
+
+    .hero-action{
+        gap: 55px;
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 50px;
+    }
+
+    .hero-connect{
+        padding: 20px 30px;
+        border-radius: 30px;
+    }
+    .hero-resume{
+        padding: 20px 30px;
+        border-radius: 30px;
+    }
+}

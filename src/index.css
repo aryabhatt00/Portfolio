@@ -1,0 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  height: 100vh;
+  background-color: rgb(1, 13, 13);
+  color: azure;
+  font-family: 'Merriweather';
+  font-weight: 800;
+
+}

@@ -1,4 +1,7 @@
-.about{
+/* ============================
+   BASE STYLES
+   ============================ */
+   .about{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,16 +30,12 @@
 .about-left {
     display: flex;
     margin-right: 30px;
-    
-  }
-  
-
+}
 .about-right{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
 .about-para{
     display: flex;
     flex-direction: column;
@@ -44,89 +43,69 @@
     font-size: 20.1px;
     font-weight: 500;
 }
-
 .about-skills {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-
 .about-skill {
     align-items: center;
-   
     position: relative;
-   
 }
-
 .about-skill p {
     min-width: 150px;
     font-size: 20px;
     font-weight: 500;
 }
-
 .skill-line {
     height: 10px;
- 
     background: linear-gradient(to right, #e77326, #f55757, #c6cdd3);
     border-radius: 8px;
     margin: 5px 0;
-  position: relative;
-   
-    
+    position: relative;
 }
-
 /* Skill proficiency widths */
 .skill-line.html {
-    width: 50%;  /* HTML & CSS skill proficiency */
+    width: 80%;  /* HTML & CSS skill proficiency */
 }
-
 .skill-line.react {
-    width: 40%;  /* React JS skill proficiency */
+    width: 80%;  /* React JS skill proficiency */
 }
-
 .skill-line.javascript {
     width: 50%;  /* JavaScript skill proficiency */
 }
-
 .skill-line.java {
     width: 70%;  /* Java skill proficiency */
 }
-
 .skill-line.python {
     width: 90%;  /* Python skill proficiency */
 }
-
 .skill-line.vhdl {
     width: 80%;  /* VHDL skill proficiency */
 }
-
 .skill-line.flask {
     width: 50%;  /* Flask skill proficiency */
 }
-
 .skill-line.aws {
     width: 50%;  /* AWS skill proficiency */
 }
-
 /* Styling for the percentage label next to the skill bar */
 .percentage {
     position: absolute;
     right: -45px;
     top: 0;
-   margin-top: 25px;
+    margin-top: 25px;
     font-size: 14px;
     font-weight: 500;
     color: 007bff; /* Darker color for readability */
     margin-left: 10px; 
 }
-
 .about-achivements{
     display: flex;
     width: 100%;
     justify-content: space-around;
     margin-bottom: 80px;
 }
-
 .about-achivement{
     display: flex;
     flex-direction: column;
@@ -134,43 +113,40 @@
     gap: 10px;
     transition: 0.3s;
 }
-
 .about-achivement h1{
     font-size: 50px;
     font-weight: 500;
-    background:linear-gradient(to right, #e77326, #f55757, #c6cdd3) ;
-    background-clip: text    ;
+    background: linear-gradient(to right, #e77326, #f55757, #c6cdd3);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 .about-achivement p{
     font-size: 20px;
     font-family: 500;
 }
-
 .about-skill:hover{
     transform: scale(1.05);
     transition: 0.5s;
 }
-
 .about-achivement:hover{
     transform: scale(1.05);
     transition: 0.5s;
 }
 
+/* ============================
+   MEDIA QUERIES (max-width:768px)
+   ============================ */
 @media(max-width:768px){
     .about{
         gap: 50px;
         margin: 50px 60px;
         align-items: start;
     }
-
     .about-title h1{
         font-size: 50px;
         padding: 0;
     }
-
     .about-title img{
         width: 150px;
         right: -20px;
@@ -178,7 +154,6 @@
     .about-sections{
         flex-direction: column;
     }
-
     .about-left{
         display: none;
     }
@@ -192,24 +167,94 @@
     }
     .about-skill p{
         font-size: 20px;
-
     }
     .about-skill hr{
         line-height: 20px;
     }
-
-    .about-achivements{
-        justify-content: space-between;
+    
+    /* Transform achievements container into a vertical timeline */
+    .about-achivements {
+        position: relative;
+        padding: 40px 0;
+        margin-bottom: 80px;
+        display: block; /* Override flex layout for timeline */
     }
-    .about-achivement{
-        gap: 10px;
+    
+    /* Create a vertical line in the center of the timeline */
+    .about-achivements::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 2px;
+        background-color: #ccc;
+        transform: translateX(-50%);
     }
-    .about-achivement h1{
+    
+    /* Hide any <hr> elements since we use a timeline line */
+    .about-achivements hr {
+        display: none;
+    }
+    
+    /* Style each achievement as a timeline item with black background */
+    .about-achivement {
+        position: relative;
+        width: 100%;
+        margin: 20px 0;
+        padding: 15px 20px;
+        background: #000;       /* Black background */
+        color: #fff;            /* White text */
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Alternate positioning of timeline items */
+    .about-achivement:nth-child(odd) {
+        text-align: right;
+        margin-right: 50%;
+    }
+    .about-achivement:nth-child(even) {
+        text-align: left;
+        margin-left: 50%;
+    }
+    
+    /* Remove any existing pseudo-element for circles */
+    .about-achivement::before {
+        display: none;
+    }
+    
+    /* Adjust heading and paragraph styles for achievements */
+    .about-achivement h1 {
         font-size: 26px;
         font-weight: 600;
+        margin-bottom: 10px;
+        color: #fff;
+        position: relative; /* Required for underline effect */
     }
-    .about-achivement p{
-        text-align: center;
+    
+    .about-achivement p {
         font-size: 20px;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+    }
+    
+    /* New: Underline effect for the entire achievement info box */
+    .about-achivement::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #fff; /* White underline */
+        transition: width 0.3s ease;
+        visibility: hidden;
+    }
+    .about-achivement:hover::after {
+        width: 100%;
+        visibility: visible;
     }
 }

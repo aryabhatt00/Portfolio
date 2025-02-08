@@ -119,6 +119,10 @@
     transition: 0.3s;
 }
 
+
+  
+
+
 @media(max-width:768px){
     .contact{
         gap: 40px;

@@ -28,12 +28,12 @@ const About = () => {
                         <div className="about-skill">
                             <p>HTML & CSS</p>
                             <div className="skill-line html"></div>
-                            <span className="percentage">50%</span>
+                            <span className="percentage">80%</span>
                         </div>
                         <div className="about-skill">
                             <p>React JS</p>
                             <div className="skill-line react"></div>
-                            <span className="percentage">40%</span>
+                            <span className="percentage">80%</span>
                         </div>
                         <div className="about-skill">
                             <p>JavaScript</p>

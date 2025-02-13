@@ -14,7 +14,7 @@ const Hero = () => {
             <div className="hero-action">
                 <div className="hero-connect"><AnchorLink className='anchor-link' offset={50} href='#contact'>Connect With Arya</AnchorLink></div>
                 <div className="hero-resume">
-                    <a href={resumePath} download="Arya_Resume.pdf">Download Resume</a>
+                    <a href={resumePath} download="Aryabhatt_Narasimha_Rao_Kankipati_Resume.pdf">Download Resume</a>
                 </div>
             </div>
         </div>
